@@ -11,7 +11,7 @@ const Footer = () => {
             <Container sx={{mb: 5}}>
                 <Grid container>
                     <Grid item md={4}>
-                        location
+                        location here
                     </Grid>
                     <Grid item md={4}>
                         Contact info
