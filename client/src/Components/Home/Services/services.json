@@ -1,0 +1,26 @@
+{
+    "title":"Services",
+    "items":[
+        {
+            "name":"Civil"
+        },
+        {
+            "name":"Electrical"
+        },
+        {
+            "name":"Mechnical"
+        },
+        {
+            "name":"Under Ground Cable"
+        },
+        {
+            "name":"Testing & Commissioning"
+        },
+        {
+            "name":"Drafting Services"
+        },
+        {
+            "name":"Fabrication"
+        }
+    ]
+}
