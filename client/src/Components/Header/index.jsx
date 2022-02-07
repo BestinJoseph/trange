@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { AppBar, Toolbar, Box, Container, Typography, IconButton, Menu, MenuItem, Button, Link } from '@mui/material'
+import { AppBar, Toolbar, Box, Container, Typography, IconButton, Menu, MenuItem, Button } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 import Slide from '@mui/material/Slide'
@@ -25,7 +25,7 @@ HideOnScroll.propTypes = {
 
 const Header = (props) => {
     const pages = ['Home', 'About', 'Services', 'projects', 'clients', 'contactus']
-    const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
+    // const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
     const navigate = useNavigate()
 
     const handleOnclick = () => {
