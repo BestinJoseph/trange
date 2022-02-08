@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles((theme)=>({
     services: {
         // height: 500,
-        background: '#A9A9A9',
+        background: '#4E9F3D',
         padding: '7rem 0 8rem',
 
         '& .service_item': {

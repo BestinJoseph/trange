@@ -31,7 +31,7 @@ export default makeStyles((theme)=>({
 
                 '& .image_container': {
                     height: '60vh',
-                    width: 440,
+                    width: '25vw',
                     background: 'white',
                     borderRadius: 30,
                     position: 'relative',
@@ -45,19 +45,20 @@ export default makeStyles((theme)=>({
                     '& .slide_content': {
                         position: 'absolute',
                         zIndex: 5,
-                        height: '100%',
                         width: '100%',
+                        height: '60vh',
 
                         '& .slide_inner_content': {
-                            padding: 40, 
-                            height: '100%',
-                            // border: '1px solid orange',
+                            height: '80%',
+                            padding: '10%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'space-between',
 
                             '& .slide_footer': {
-                                height: '82%',
                                 display: 'flex',
                                 justifyContent: 'space-between',
-                                alignItems: 'flex-end',
+                                // border: '1px solid orange',
                             }
                         }
                     }
