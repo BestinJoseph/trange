@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react'
 
-import About from './About'
-import Difference from './Difference'
-import Services from './Services'
 import Slider from './Slider'
+import About from './About'
+import Services from './Services'
+import Difference from './Difference'
+import Clients from '../Clients'
+import Request from './Request'
 
 const Home = () => {
     return (
@@ -11,7 +13,9 @@ const Home = () => {
             <Slider />
             <About />
             <Services />
+            <Request />
             <Difference />
+            <Clients />
         </Fragment>
     )
 }
