@@ -10,4 +10,6 @@ router.get('/about', (req, res) => {
     res.send('welcome to our profile page.')
 })
 
+
+
 export default router
