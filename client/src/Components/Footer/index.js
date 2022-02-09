@@ -13,7 +13,15 @@ const Footer = () => {
                 <Container sx={{mb: 5}}>
                     <Grid container>
                         <Grid item md={4}>
-                            location
+                            <Typography variant="h4">Tran <span sx={{color: 'orange'}}>Ge</span></Typography>
+                            <Box sx={{mt:1}}>
+                                <Typography varian="body1" sx={{color: '#47526f', pb: .5}}>Address first Line</Typography>
+                                <Typography varian="body1" sx={{color: '#47526f', pb: .5}}>Second Line, Damam</Typography>
+                                <Typography varian="body1" sx={{color: '#47526f', pb: .5}}>Pin Code, Kingdom of Saudi Arabia</Typography>
+                                <Typography varian="h5" sx={{fontWeight: 'bold', pb: .5}}>+(91) 57 568 7894</Typography>
+                                <Typography varian="h5" sx={{fontWeight: 'bold', pb: .5}}>info@trange.sa</Typography>
+                                <Typography varian="h5" sx={{fontWeight: 'bold', pb: .5, color: '#35405d'}}>Map / Direction</Typography>
+                            </Box>
                         </Grid>
                         <Grid item md={4}>
                             Contact info
