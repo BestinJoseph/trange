@@ -13,4 +13,9 @@ router.get('/dailytracker', async (req, res) => {
     res.json(data).status(200)
 })
 
+router.get('/dailytracker/:id', async (req, res) => {
+    const data = await DailyTracker.findOne({_id: req.params.id})
+    res.json(data).status(200)
+})
+
 export default router

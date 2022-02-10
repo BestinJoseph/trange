@@ -6,6 +6,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
 import useStyles from './CreateDailyActivitieStyles'
 import { postDailyAct } from '../../Apis/TrackeApi'
+import classNames from 'classnames'
 
 const CreateDailyActivitie = () => {
     const classes = useStyles()
@@ -25,11 +26,11 @@ const CreateDailyActivitie = () => {
     return (
         <Box className={classes.dailyactivities}>
             <Box>
-                <Box sx={{display: 'flex'}}>
-                    <ArrowBackIcon sx={{ mr: 2, cursor: 'pointer', width: 42, height: 42, }} onClick={handleBack}/>
-                    <Typography variant='h4'>Daily Tracker Form</Typography>
+                <Box className={classNames('nav_header')}>
+                    <ArrowBackIcon sx={{ mr: 2, cursor: 'pointer', width: 30, height: 30, }} onClick={handleBack}/>
+                    <Typography variant='h6'>Daily Tracker Log</Typography>
                 </Box>
-                <Box sx={{width:400, mt:4}}>
+                <Box sx={{p:'1%', mt:4}}>
                     <Formik initialValues={initialValues} onSubmit={handleOnSubmit}>
                         <Form>
                             <Box sx={{mb: 2}}>
@@ -42,7 +43,7 @@ const CreateDailyActivitie = () => {
                                 <Field name="project" type="text" label="Project Name" as={TextField} fullWidth/>
                             </Box>
                             <Box sx={{mb: 2}}>
-                                <Field name="activities" type="text" placeholder="Todays Activities" as={TextareaAutosize} minRows={10}/>
+                                <Field name="activities" type="text" placeholder="Todays Activities" className={classes.textarea}/>
                             </Box>
                             <Button variant="contained" color="success" size="large" type="submit">Submit</Button>
                         </Form>
