@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, TextField, Typography } from '@mui/material'
+import { Box, Button, TextareaAutosize, TextField, Typography } from '@mui/material'
 import { Formik, Form, Field } from 'formik'
 import { useNavigate } from 'react-router-dom'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
@@ -10,7 +10,7 @@ import classNames from 'classnames'
 
 const CreateDailyActivitie = () => {
     const classes = useStyles()
-    let initialValues = {fullName: '', department: '', project: '', activities: ''}
+    let initialValues = {fullName: '', number: '', department: '', project: '', activities: ''}
     const navigate = useNavigate()
 
     const handleOnSubmit = (Values, actions) => {
@@ -34,16 +34,13 @@ const CreateDailyActivitie = () => {
                     <Formik initialValues={initialValues} onSubmit={handleOnSubmit}>
                         <Form>
                             <Box sx={{mb: 2}}>
-                                <Field name="fullName" type="text" label="Your Name" as={TextField} fullWidth/>
-                            </Box>
-                            <Box sx={{mb: 2}}>
-                                <Field name="department" type="text" label="Your Department" as={TextField} fullWidth/>
+                                <Field name="number" type="text" label="Employee ID" as={TextField} fullWidth/>
                             </Box>
                             <Box sx={{mb: 2}}>
                                 <Field name="project" type="text" label="Project Name" as={TextField} fullWidth/>
                             </Box>
                             <Box sx={{mb: 2}}>
-                                <Field name="activities" type="text" placeholder="Todays Activities" className={classes.textarea}/>
+                                <Field name="activities" type="text" placeholder="Todays Activities" as={TextareaAutosize} minRows={6} className={classes.textarea}/>
                             </Box>
                             <Button variant="contained" color="success" size="large" type="submit">Submit</Button>
                         </Form>

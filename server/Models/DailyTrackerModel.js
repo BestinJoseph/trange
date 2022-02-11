@@ -19,6 +19,10 @@ const dailyTrackerSchema = mongoose.Schema({
         type: String,
         require: true
     },
+    number: {
+        type: String,
+        require: true,
+    },
     createdOn: {
         type: Date,
         require: Date.now

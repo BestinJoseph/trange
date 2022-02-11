@@ -6,9 +6,7 @@ mongoose.set('bufferCommands', false)
 
 const options = {
     useNewUrlParser: true,
-    useUnifiedTopology: true 
+    useUnifiedTopology: true
 }
 
-export default mongoose.connect(process.env.DB_URL, options, () => {
-    console.log('Connected to DB')
-})
+export default await mongoose.connect(process.env.DB_URL, options)

@@ -12,13 +12,13 @@ export default makeStyles((theme) => ({
         },
     },
     textarea: {
-        width: '93.5%',
-        height: '100px',
+        width: '95.1%',
+        height: '500px',
         borderRadius: 4,
         outline: 'none',
         border: '1px solid #767676',
         fontSize: '17px',
-        padding: '3% !important',
+        padding: '2% !important',
         display: 'flex',
         margin: '0',
     }

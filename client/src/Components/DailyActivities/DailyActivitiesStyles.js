@@ -40,7 +40,7 @@ export default makeStyles((theme) => ({
 
                     '&:hover': {
                         boderBottom: '1px solid orange',
-                        boxShadow: '5px 10px #888888',
+                        // boxShadow: '5px 10px #888888',
                         background: '#Efe8fd',
                     }
                 },

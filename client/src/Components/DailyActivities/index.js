@@ -6,7 +6,7 @@ import moment from 'moment'
 import { Link } from 'react-router-dom'
 
 import useStyles from './DailyActivitiesStyles'
-import { getDailyAct } from '../../Apis/TrackeApi'
+import { getAllActivitiesApi } from '../../Apis/TrackeApi'
 import classNames from 'classnames'
 
 const DailyActivities = () => {
@@ -16,7 +16,7 @@ const DailyActivities = () => {
 
     useEffect(()=>{
         const jobs = () => {
-            getDailyAct().then(nic=>setData(nic.data))
+            getAllActivitiesApi().then(nic=>setData(nic.data))
         }
 
         jobs()
