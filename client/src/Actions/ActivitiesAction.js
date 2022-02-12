@@ -1,4 +1,4 @@
-import { GET_ACTIVITIES, GET_ACTIVITY } from '../Constants/ActivityConstants'
+import { GET_ACTIVITIES } from '../Constants/ActivityConstants'
 import { getAllActivitiesApi } from '../Apis/TrackeApi'
 import { Navigate } from 'react-router-dom'
 
