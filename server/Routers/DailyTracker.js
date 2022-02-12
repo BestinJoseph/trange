@@ -5,7 +5,6 @@ import mongoose from 'mongoose'
 
 router.post('/dailytracker', async (req, res) => {
     const data = await DailyTracker.create(req.body)
-    console.log(data)
     res.json(data).status(200)
 })
 
