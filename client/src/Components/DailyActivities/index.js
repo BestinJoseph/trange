@@ -4,31 +4,27 @@ import AddIcon from '@mui/icons-material/Add'
 import { useNavigate } from 'react-router-dom'
 import moment from 'moment'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 import useStyles from './DailyActivitiesStyles'
-import { getAllActivitiesApi } from '../../Apis/TrackeApi'
 import classNames from 'classnames'
 
 const DailyActivities = () => {
     const classes = useStyles()
-    const [data, setData] = useState()
+    const { activities } = useSelector( state => state )
+    const [data, setData] = useState([])
     const navigate = useNavigate()
 
     useEffect(()=>{
-        const jobs = () => {
-            getAllActivitiesApi().then(nic=>setData(nic.data))
-        }
+        activities.length >= 1 && setData( prev => {
+            return [...activities]
+        })
 
-        jobs()
-    },[])
+        // jobs()
+    },[setData, activities])
 
     const handleHome = () => {
         navigate('/create')
-    }
-
-    const handleNavigation = (e) => {
-        // console.log(e.target.p)
-        // navigate(`/${da._id}`)
     }
 
     return (
@@ -41,7 +37,7 @@ const DailyActivities = () => {
                 <ul className={classNames('daily_lists')}>
                     {
                         data && data.map( (da, i) => (
-                            <li key={i} className={classNames('daily_lists_item')} onClick={handleNavigation}>
+                            <li key={i} className={classNames('daily_lists_item')}>
                                 <Link to={`/${da._id}`} className={classNames('daily_lists_item_link')}>
                                     <Typography variant="body1" >{da.fullName}'s track of { moment(da.createdAt).format("Do MMM, YYYY") }</Typography>
                                 </Link>

@@ -5,6 +5,5 @@ import { getAllActivitiesApi } from '../Apis/TrackeApi'
 
 export const getAllActivities = () => async (dispatch) => {
     const { data } = await getAllActivitiesApi()
-    console.log(data)
-    dispatch({type: GET_ACTIVITIES, payload: {msg: 'nice activities.'}})
+    dispatch({type: GET_ACTIVITIES, payload: data})
 }

@@ -34,6 +34,12 @@ const CreateDailyActivitie = () => {
                     <Formik initialValues={initialValues} onSubmit={handleOnSubmit}>
                         <Form>
                             <Box sx={{mb: 2}}>
+                                <Field name="fullName" type="text" label="Full Name" as={TextField} fullWidth/>
+                            </Box>
+                            <Box sx={{mb: 2}}>
+                                <Field name="department" type="text" label="Department" as={TextField} fullWidth/>
+                            </Box>
+                            <Box sx={{mb: 2}}>
                                 <Field name="number" type="text" label="Employee ID" as={TextField} fullWidth/>
                             </Box>
                             <Box sx={{mb: 2}}>
