@@ -1,4 +1,6 @@
 import axios from 'axios'
 
-export const postDailyAct = async (activities) => await axios.post('/dailytracker', activities)
-export const getAllActivitiesApi = async () => await axios.get('/dailytracker')
+const api = 'https://whispering-tor-44978.herokuapp.com/api'
+
+export const postDailyAct = async (activities) => await axios.post(`${api}/dailytracker`, activities)
+export const getAllActivitiesApi = async () => await axios.get(`${api}/dailytracker`)
