@@ -38,7 +38,7 @@ const DailyActivities = () => {
                     {
                         data && data.map( (da, i) => (
                             <li key={i} className={classNames('daily_lists_item')}>
-                                <Link to={`/${da._id}`} className={classNames('daily_lists_item_link')}>
+                                <Link to={`/${da._id}`} className={classNames('daily_lists_item_link')}>{ da._id }
                                     <Typography variant="body1" >{da.fullName}'s track of { moment(da.createdAt).format("Do MMM, YYYY") }</Typography>
                                 </Link>
                             </li>

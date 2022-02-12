@@ -10,13 +10,12 @@ router.post('/dailytracker', async (req, res) => {
 })
 
 router.get('/dailytracker', async (req, res) => {
-    console.log('nice...')
     const data = await DailyTracker.find({})
     res.json(data).status(200)
 })
 
 router.get('/dailytracker/:id', async (req, res) => {
-    if (mongoose.Types.ObjectId.isValid('5c0a7922c9d89830f4911426')) {
+    if (mongoose.Types.ObjectId.isValid(req.params.id)) {
         const data = await DailyTracker.findOne({_id: req.params.id})
         res.json(data).status(200)
     } else {

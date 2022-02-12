@@ -4,25 +4,28 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import { useNavigate, useParams } from 'react-router-dom'
 import moment from 'moment'
 import classNames from 'classnames'
+import { useSelector } from 'react-redux'
 
 import useStyles from './DailyActivityOneStyles'
-import { getOneDailyAct } from '../../Apis/TrackeApi'
 
 const DailyActivityOne = () => {
     const classes = useStyles()
     const navigate = useNavigate()
     const { _id } = useParams()
     const [data, setData] = useState()
+    const { activities } = useSelector( state => state )
 
     useEffect(() => {
         const getOneTrack = () => {
-            getOneDailyAct(_id).then( incoming => {
-                setData(incoming.data)
-            })
+            if(_id === 'undefined' ) {
+                return navigate('/')
+            }
+            const dat = activities.filter( act => act._id === _id)[0]
+            setData(dat)
         }
 
         getOneTrack()
-    },[_id])
+    },[_id, activities, navigate])
 
     const handleBack = () => {
         navigate('/')
