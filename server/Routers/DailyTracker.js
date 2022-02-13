@@ -2,16 +2,11 @@ import express from 'express'
 const router = express.Router()
 import DailyTracker from '../Models/DailyTrackerModel.js'
 import mongoose from 'mongoose'
+import { postActivity, getAllTracker } from '../Controllers/ActivitiesController.js'
 
-router.post('/dailytracker', async (req, res) => {
-    const data = await DailyTracker.create(req.body)
-    res.json(data).status(200)
-})
+router.route('/dailytracker').post(postActivity)
 
-router.get('/dailytracker', async (req, res) => {
-    const data = await DailyTracker.find({})
-    res.json(data).status(200)
-})
+router.route('/dailytracker').get(getAllTracker)
 
 router.get('/dailytracker/:id', async (req, res) => {
     if (mongoose.Types.ObjectId.isValid(req.params.id)) {

@@ -17,10 +17,8 @@ const DailyActivities = () => {
 
     useEffect(()=>{
         activities.length >= 1 && setData( prev => {
-            return [...activities]
+            return activities.filter( act => act.fullName.toLowerCase() === 'bestin' )
         })
-
-        // jobs()
     },[setData, activities])
 
     const handleHome = () => {
@@ -38,8 +36,8 @@ const DailyActivities = () => {
                     {
                         data && data.map( (da, i) => (
                             <li key={i} className={classNames('daily_lists_item')}>
-                                <Link to={`/${da._id}`} className={classNames('daily_lists_item_link')}>{ da._id }
-                                    <Typography variant="body1" >{da.fullName}'s track of { moment(da.createdAt).format("Do MMM, YYYY") }</Typography>
+                                <Link to={`/${da._id}`} className={classNames('daily_lists_item_link')}>
+                                    <Typography variant="body1" >{da.fullName}'s track of { moment(da.createdAt).format("Do MMM, YYYY")}</Typography>
                                 </Link>
                             </li>
                         ))

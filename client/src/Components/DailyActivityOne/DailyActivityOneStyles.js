@@ -23,12 +23,12 @@ export default makeStyles((theme)=>({
 
                     '& .list_item': {
                         color: '#2f0670',
-                        // borderBottom: '3px solid #2f0670',
-                        boxShadow: '0.5px 3px 0px #Cacacb',
+                        borderBottom: '1px solid #2f0670',
+                        // boxShadow: '0.5px 3px 0px #Cacacb',
                         padding: '15px 15px',
-                        marginBottom: '15px',
-                        borderRadius: 8,
-
+                        marginBottom: '5px',
+                        // borderRadius: 8,
+                        background: '#F7F9FE'
                     }
                 }
             }

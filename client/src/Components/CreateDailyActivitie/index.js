@@ -3,18 +3,20 @@ import { Box, Button, TextareaAutosize, TextField, Typography } from '@mui/mater
 import { Formik, Form, Field } from 'formik'
 import { useNavigate } from 'react-router-dom'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import classNames from 'classnames'
+import { useDispatch } from 'react-redux'
 
 import useStyles from './CreateDailyActivitieStyles'
-import { postDailyAct } from '../../Apis/TrackeApi'
-import classNames from 'classnames'
+import { postActivity } from '../../Actions/ActivitiesAction'
 
 const CreateDailyActivitie = () => {
     const classes = useStyles()
     let initialValues = {fullName: '', number: '', department: '', project: '', activities: ''}
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     const handleOnSubmit = (Values, actions) => {
-        postDailyAct(Values)
+        dispatch(postActivity(Values))
         navigate('/')
         actions.resetForm()
     }

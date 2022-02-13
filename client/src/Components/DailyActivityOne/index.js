@@ -38,14 +38,14 @@ const DailyActivityOne = () => {
                 <Typography variant='h6'>{ data && `${data.fullName}'s Daily Activities` }</Typography>
             </Box>
             <Box className={classNames('activity_container')}>
-                <Typography variant="body1">{data && data.number}</Typography>
-                <Typography variant="body1">{data && moment(data.createdAt).format("Do MMM, YYYY")}</Typography>
+                <Typography variant="body1" sx={{mb:1}}>Emp. ID: {data && data.number}</Typography>
+                <Typography variant="body1">Date: {data && moment(data.createdAt).format("Do MMM, YYYY")}</Typography>
                 <Box sx={{ mt:3 }} className={classNames('activity_lists_container')}>
                     <Typography variant="h6">My Activities:</Typography>
                     <ul className={classNames('activities_lists')}>
                         {
                             data && data.activities.split('\n').map( (activity, i) => (
-                                <li key={i} className={classNames('list_item')}><Typography variant="body1" >{activity}</Typography></li>
+                                <li key={i} className={classNames('list_item')}><Typography variant="body1">{activity}</Typography></li>
                             ))
                         }
                     </ul>
