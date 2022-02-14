@@ -35,12 +35,12 @@ export const UserSignInController = (req, res, next) => {
     const refreshToken = getRefreshToken({_id: req.user._id})
     User.findById({_id: req.user._id}).then( user => {
         user.refreshToken.push({refreshToken})
-        user.save((err, user) => {
+        user.save((err, userData) => {
             if (err) {
                 res.status(500).json({errors: err.msg, success: false})
             } else {
                 res.cookie("refreshToken", refreshToken, COOKIE_OPTIONS)
-                res.status(200).json({errors: null, success: true, token})
+                res.status(200).json({errors: null, success: true, token, userData})
             }
         })
     }, (err) => next(err))

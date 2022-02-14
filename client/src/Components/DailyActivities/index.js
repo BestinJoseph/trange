@@ -5,21 +5,22 @@ import { useNavigate } from 'react-router-dom'
 import moment from 'moment'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import EditIcon from '@mui/icons-material/Edit'
 
 import useStyles from './DailyActivitiesStyles'
 import classNames from 'classnames'
 
 const DailyActivities = () => {
     const classes = useStyles()
-    const { activities } = useSelector( state => state )
+    const { activities, auth } = useSelector( state => state )
     const [data, setData] = useState([])
     const navigate = useNavigate()
 
     useEffect(()=>{
-        activities.length >= 1 && setData( prev => {
-            return activities.filter( act => act.fullName.toLowerCase() === 'bestin' )
+        activities.length >= 1 && auth.user.firstName && setData( prev => {
+            return activities.filter( act => act.fullName.toLowerCase().trim() === auth.user.firstName.toLowerCase() )
         })
-    },[setData, activities])
+    },[setData, activities, auth])
 
     const handleHome = () => {
         navigate('/create')
@@ -37,8 +38,11 @@ const DailyActivities = () => {
                         data && data.map( (da, i) => (
                             <li key={i} className={classNames('daily_lists_item')}>
                                 <Link to={`/${da._id}`} className={classNames('daily_lists_item_link')}>
-                                    <Typography variant="body1" >{da.fullName}'s track of { moment(da.createdAt).format("Do MMM, YYYY")}</Typography>
+                                    <Typography variant="body1" >{ moment(da.createdAt).format("Do MMM, YYYY")}, activities</Typography>
                                 </Link>
+                                {
+                                    moment(da.createdAt).format('DD-MM-yyyy') === moment(Date.now()).format('DD-MM-yyyy') ? <EditIcon /> : null
+                                }
                             </li>
                         ))
                     }

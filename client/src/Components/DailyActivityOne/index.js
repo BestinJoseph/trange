@@ -41,7 +41,8 @@ const DailyActivityOne = () => {
                 <Typography variant="body1" sx={{mb:1}}>Emp. ID: {data && data.number}</Typography>
                 <Typography variant="body1">Date: {data && moment(data.createdAt).format("Do MMM, YYYY")}</Typography>
                 <Box sx={{ mt:3 }} className={classNames('activity_lists_container')}>
-                    <Typography variant="h6">My Activities:</Typography>
+                    <Typography variant="h6" sx={{pb:3}}>My Activities:</Typography>
+                    <Typography variant="body1">Project: {data ? data.project : null}</Typography>
                     <ul className={classNames('activities_lists')}>
                         {
                             data && data.activities.split('\n').map( (activity, i) => (

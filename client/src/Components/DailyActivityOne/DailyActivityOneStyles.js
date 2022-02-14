@@ -26,7 +26,7 @@ export default makeStyles((theme)=>({
                         borderBottom: '1px solid #2f0670',
                         // boxShadow: '0.5px 3px 0px #Cacacb',
                         padding: '15px 15px',
-                        marginBottom: '5px',
+                        marginBottom: '7px',
                         // borderRadius: 8,
                         background: '#F7F9FE'
                     }

@@ -1,4 +1,4 @@
-import jwt_decode from 'jwt-decode'
+// import jwt_decode from 'jwt-decode'
 // import { Navigate } from 'react-router-dom'
 
 import { isSignInUser } from '../Apis/AuthApi'
@@ -7,12 +7,12 @@ import setAuthToken from '../utils/setAuthToken'
 
 export const userLogin = (user) => (dispatch) => {
     isSignInUser(user).then( ({data}) => {
-        const {errors, token} = data
+        const {errors, token, userData} = data
         if (token) {
             localStorage.setItem("jwtToken", token)
             setAuthToken(token)
-            const decode = jwt_decode(token)
-            dispatch({type: SET_CURRENT_USER, payload: decode })
+            // const decode = jwt_decode(token)
+            dispatch({type: SET_CURRENT_USER, payload: userData })
         } else {
             console.log('nice.')
             dispatch({type: GET_ERRORS, payload: errors })

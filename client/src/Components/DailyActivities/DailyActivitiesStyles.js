@@ -31,6 +31,8 @@ export default makeStyles((theme) => ({
                     boxShadow: '0px 0px 5px #Cacacb',
                     padding: '20px',
                     borderRadius: 5,
+                    display: 'flex',
+                    justifyContent: 'space-between',
 
                     '& .daily_lists_item_link': {
                         textDecoration: 'none',
