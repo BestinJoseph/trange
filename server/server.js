@@ -5,7 +5,6 @@ import passport from 'passport'
 import cookieParser from 'cookie-parser'
 
 import publics from './Routers/public.js'
-import dailytracker from './Routers/DailyTracker.js'
 import users from './Routers/UserRoutes.js'
 import './Utiles/db.js'
 import './Strategies/JwtStrategy.js'
@@ -23,7 +22,6 @@ app.use(passport.initialize())
 app.use(cookieParser(process.env.COOKIE_SECRET))
 
 app.use('/', publics)
-app.use('/api', dailytracker)
 app.use('/api', users)
 
 app.listen(port, () => console.log('runnings'))
