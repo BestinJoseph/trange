@@ -7,6 +7,7 @@ const initialState = {
 export default (state = initialState, actions) => {
     switch (actions.type) {
         case GET_ACTIVITIES:
+            state.activities = []
             return [ ...state.activities, ...actions.payload ]
         case CREATE_ACTIVITY:
             return [ actions.payload, ...state]

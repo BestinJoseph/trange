@@ -7,14 +7,14 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import { Provider } from 'react-redux'
 // import store from './Store'
-import factory from './configureStore'
+import { persistor, store } from './configureStore'
 
-const { persistor, store } = factory()
+// const { persistor, store } = factory()
 
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
-            <PersistGate loading={null} persistor={persistor}>
+            <PersistGate persistor={persistor}>
                 <App />
             </PersistGate>
         </Provider>

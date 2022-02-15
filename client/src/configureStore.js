@@ -1,24 +1,18 @@
 /* eslint-disable import/no-anonymous-default-export */
-// import React from 'react'
 import { applyMiddleware, createStore } from "redux"
 import { persistStore, persistReducer } from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
+import storage from 'redux-persist/es/storage'
 import thunk from "redux-thunk"
 
 import rootReducer from './RootReducers'
 
-const persistConfig = {
-    key: 'root',
-    storage: storage,
-    whitelist: ['auth']
+const primary = {
+    key:'main-root',
+    storage
 }
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
+const persistedReducer = persistReducer(primary, rootReducer)
 
-console.log('nice...')
+export const store = createStore(persistedReducer, applyMiddleware(thunk))
 
-export default () => {
-    let store = createStore(persistedReducer, {}, applyMiddleware(thunk))
-    let persistor = persistStore(store)
-    return { store, persistor}
-}
+export const persistor = persistStore(store)
