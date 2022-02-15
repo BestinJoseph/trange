@@ -4,7 +4,7 @@ import Slider from './Slider'
 import About from './About'
 import Services from './Services'
 import Difference from './Difference'
-import Clients from '../Clients'
+import Clients from './Clients'
 import Request from './Request'
 
 const Home = () => {

@@ -1,0 +1,30 @@
+{
+  "intros" : ["The Company continues to enhance its capabilities to cater to the evolving needs of the railway industry by fast-tracking project execution as well as adopting new technologies & mechanised construction methods that enable it to meet the demands of a progressing nation. The Company also undertakes Railway Infrastructure jobs for private customers and has developed competencies and capabilities to undertake Railway projects including composite jobs in any challenging terrain or environment. TranG has successfully diversified its client portfolio to include all the major players in the railway industry, RVNL and KEC.", "The scope of work includes erection, testing and commissioning of 25 kV, AC, 50 Hz, single phase, traction overhead equipment, traction sub stations, switching stations and other associated works of Civil, Electrical, and Mechanical.", "It also includes civil engineering works i.e. service buildings, quarters, tower car sidings, sheds and electrical general services works for railway electrification of Hubli -Tinaighat (97 RKM) of Hubli Division of South Western Railway."],
+  "projects": [
+    {
+      "name": "some name goes here",
+      "location": "Jubail, KSA",
+      "images": "https://www.hadihaider.com/images/resource/trans1.jpg?v=1"
+    },
+    {
+      "name": "some name goes here",
+      "location": "Damam, KSA",
+      "images": "https://image.made-in-china.com/44f3j00cadtPInyZGWe/Electric-Power-Transmission-Galvanized-Angle-Steel-Tower.jpg"
+    },
+    {
+      "name": "some name goes here",
+      "location": "Damam, KSA",
+      "images": "https://studentenergy.org/site/assets/uploads/2020/01/Power-Plant.jpg"
+    },
+    {
+      "name": "some name goes here",
+      "location": "Damam, KSA",
+      "images": "https://thefinancialexpress.com.bd/uploads/1625669923.jpg"
+    },
+    {
+      "name": "some name goes here",
+      "location": "Damam, KSA",
+      "images": "https://thefinancialexpress.com.bd/uploads/1625669923.jpg"
+    }
+  ]
+}

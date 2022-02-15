@@ -13,7 +13,7 @@ const Footer = () => {
                 <Container sx={{mb: 5}}>
                     <Grid container>
                         <Grid item md={4}>
-                            <Typography variant="h4">Tran <span sx={{color: 'orange'}}>Ge</span></Typography>
+                            <Typography variant="h4" sx={{mb:4}}>Tran <span sx={{color: 'orange'}}>Ge</span></Typography>
                             <Box sx={{mt:1}}>
                                 <Typography varian="body1" sx={{color: '#47526f', pb: .5}}>Address first Line</Typography>
                                 <Typography varian="body1" sx={{color: '#47526f', pb: .5}}>Second Line, Damam</Typography>
@@ -23,11 +23,29 @@ const Footer = () => {
                                 <Typography varian="h5" sx={{fontWeight: 'bold', pb: .5, color: '#35405d'}}>Map / Direction</Typography>
                             </Box>
                         </Grid>
-                        <Grid item md={4}>
-                            Contact info
+                        <Grid item md={4} className={classNames('footer_links_container')}>
+                            <Typography variant="h4" sx={{mb:4}}>Category</Typography>
+                            <Box className={classNames('links_section')}>
+                                <ul className={classNames('link_ul')}>
+                                    <li className={classNames('link_ul_li')}><Link className={classNames('link_a')} to="/civil">Civil</Link></li>
+                                    <li className={classNames('link_ul_li')}><Link className={classNames('link_a')} to="/Electrical">Electrical</Link></li>
+                                    <li className={classNames('link_ul_li')}><Link className={classNames('link_a')} to="/undergroundcable">Under Ground Cable</Link></li>
+                                    <li className={classNames('link_ul_li')}><Link className={classNames('link_a')} to="/testingcommissioning">Testing & Commissioning</Link></li>
+                                    <li className={classNames('link_ul_li')}><Link className={classNames('link_a')} to="/draftingservices">Drafting Services</Link></li>
+                                    <li className={classNames('link_ul_li')}><Link className={classNames('link_a')} to="/fabrication">Fabrication</Link></li>
+                                </ul>
+                            </Box>
                         </Grid>
                         <Grid item md={4}>
-                            More info.
+                            <Typography variant="h4" sx={{mb:4}}>Recent Projects</Typography>
+                            <Box>
+                                <ul>
+                                    <li>Bolevard</li>
+                                    <li>KKIA</li>
+                                    <li>Hyundai Shutdown Work</li>
+                                    <li>Railway: Jeddah - Damam</li>
+                                </ul>
+                            </Box>
                         </Grid>
                     </Grid>
                 </Container>

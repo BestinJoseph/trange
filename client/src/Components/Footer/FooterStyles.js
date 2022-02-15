@@ -7,6 +7,30 @@ export default makeStyles((theme)=>({
             background: '#16213E',
             padding: '5rem 0 1rem',
             color: 'white',
+
+            '& .footer_links_container': {
+
+                '& .links_section': {
+
+                    '& .link_ul': {
+                        listStyle: 'none',
+                        paddingLeft: 0,
+
+                        '& .link_ul_li': {
+                            marginBottom: 5,
+
+                            '& .link_a': {
+                                textDecoration: 'none',
+                                cursor: 'pointer',
+
+                                '&:hover': {
+                                    color: 'white',
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         },
 
         '& .footer_reserved': {
