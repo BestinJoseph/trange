@@ -6,10 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { PersistGate } from 'redux-persist/integration/react'
 
 import { Provider } from 'react-redux'
-import store from './Store'
+// import store from './Store'
 import factory from './configureStore'
 
-const { persistor } = factory()
+const { persistor, store } = factory()
 
 ReactDOM.render(
     <React.StrictMode>

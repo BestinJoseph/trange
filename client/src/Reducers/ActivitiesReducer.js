@@ -9,7 +9,7 @@ export default (state = initialState, actions) => {
         case GET_ACTIVITIES:
             return [ ...state.activities, ...actions.payload ]
         case CREATE_ACTIVITY:
-            return state.unshift(actions.payload)
+            return [ actions.payload, ...state]
         default:
             return state
     }
