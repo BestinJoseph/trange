@@ -26,7 +26,7 @@ export default makeStyles((theme) => ({
 
                 '& .daily_lists_item': {
                     marginBottom: 10,
-                    cursor: 'pointer',
+                    // cursor: 'pointer',
                     // border: '.5px solid #2f0670',
                     boxShadow: '0px 0px 5px #Cacacb',
                     padding: '20px',
@@ -40,11 +40,11 @@ export default makeStyles((theme) => ({
                         fontWeight: 600,
                     },
 
-                    '&:hover': {
-                        boderBottom: '1px solid orange',
-                        // boxShadow: '5px 10px #888888',
-                        background: '#Efe8fd',
-                    }
+                    // '&:hover': {
+                    //     boderBottom: '1px solid orange',
+                    //     // boxShadow: '5px 10px #888888',
+                    //     background: '#Efe8fd',
+                    // }
                 },
             }
         }

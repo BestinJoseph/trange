@@ -17,13 +17,18 @@ const DailyActivities = () => {
     const navigate = useNavigate()
 
     useEffect(()=>{
-        activities.length >= 1 && auth.user.firstName && setData( prev => {
-            return activities.filter( act => act.fullName.toLowerCase().trim() === auth.user.firstName.toLowerCase() )
+        
+        activities.activities.length >= 1 && auth.user.firstName && setData( prev => {
+            return activities.activities.filter( act => act.fullName.toLowerCase().trim() === auth.user.firstName.toLowerCase() )
         })
     },[setData, activities, auth])
 
     const handleHome = () => {
         navigate('/create')
+    }
+
+    const handleEdit = (id) => {
+        navigate(`/edit/${id}`)
     }
 
     return (
@@ -41,7 +46,7 @@ const DailyActivities = () => {
                                     <Typography variant="body1" >{ moment(da.createdAt).format("Do MMM, YYYY")}, activities</Typography>
                                 </Link>
                                 {
-                                    moment(da.createdAt).format('DD-MM-yyyy') === moment(Date.now()).format('DD-MM-yyyy') ? <EditIcon /> : null
+                                    moment(da.createdAt).format('DD-MM-yyyy') === moment(Date.now()).format('DD-MM-yyyy') ? <EditIcon onClick={ () => handleEdit(da._id) } /> : null
                                 }
                             </li>
                         ))

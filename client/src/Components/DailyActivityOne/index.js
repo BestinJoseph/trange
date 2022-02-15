@@ -13,7 +13,7 @@ const DailyActivityOne = () => {
     const navigate = useNavigate()
     const { _id } = useParams()
     const [data, setData] = useState()
-    const { activities } = useSelector( state => state )
+    const { activities } = useSelector( state => state.activities )
 
     useEffect(() => {
         const getOneTrack = () => {
