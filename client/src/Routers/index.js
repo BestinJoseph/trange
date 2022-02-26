@@ -1,12 +1,13 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Layout from '../Components/Layout'
 
 import {About, Services, Clients, Projects, ContactUs, Difference, Organization, NotFound, Home} from '../Components'
 
 const Routers_source = () => {
+
     return (
-        <Router>
+        <Router onUpdate={() => window.scrollTo(0,0)}>
             <Layout>
                 <Routes>
                     <Route exact path="/clients" element={<Clients />} />

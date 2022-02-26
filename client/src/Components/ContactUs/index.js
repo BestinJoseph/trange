@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+
+import ContactIntro from './ContactIntro'
 
 const ContactUs = () => {
+
     return (
-        <div>
-            Contact us informations goes here.
-        </div>
+        <Fragment>
+            <ContactIntro />
+        </Fragment>
     )
 }
 

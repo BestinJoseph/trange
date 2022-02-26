@@ -1,10 +1,15 @@
 import React from 'react'
+import Banner from './Banner'
+import OurProcess from './OurProcess'
+import OurServices from './OurServices'
 
 const Services = () => {
     return (
-        <div>
-            Our Services.
-        </div>
+        <React.Fragment>
+            <Banner />
+            <OurProcess />
+            <OurServices />
+        </React.Fragment>
     )
 }
 

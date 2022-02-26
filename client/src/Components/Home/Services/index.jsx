@@ -7,7 +7,6 @@ import classNames from 'classnames'
 
 const Services = () => {
     const classes = useStyles()
-    console.log(process.env.PUBLIC_URL)
 
     return (
         <Box className={classes.services}>

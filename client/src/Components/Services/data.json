@@ -1,0 +1,15 @@
+{
+    "services": [
+        {
+            "name": "Civil",
+            "description": [
+                "Industrial buildings construction (Steel Structural)",
+                "Earth works (Site grading & Landscaping)",
+                "Construction of buildings & tunnels.",
+                "Construction of Industrial equipment foundations.",
+                "Providing Asphalt paving and concrete Roads.",
+                "Topographic & Land Survey."
+            ]
+        }
+    ]
+}
