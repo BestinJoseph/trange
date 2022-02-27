@@ -9,6 +9,10 @@ export default makeStyles((theme)=>({
         alignItems: 'center',
         overflow: 'hidden',
 
+        [theme.width]:{
+
+        },
+
         '& .container': {
             // display: 'flex',
             marginTop: 60,

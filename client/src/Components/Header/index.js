@@ -54,11 +54,10 @@ const Header = (props) => {
                         </Menu>
                     </Box>
                     <Container>
-                        <Toolbar sx={{ justifyContent: 'space-between', height: 80, display: {xs:'none', md:'block'}}}>
+                        <Toolbar sx={{ justifyContent: 'space-between', height: 80, display: {xs:'none', md:'flex'}}}>
                             <Box sx={{ flexGrow: 0, mr: 15, }}>
                                 <Typography variant="h4" color="white">Tran Ge</Typography>
                             </Box>
-                            
                             <Box sx={{ flexGrow: 0, display: { xs:'none', md:'flex'} }}>
                                 { pages.map( page => (
                                     <Button key={page} onClick={() => navigate(`/${page=== 'Home' ? '' : page.toLowerCase()}`)} sx={{ my:"2", color: 'white', display: 'block'}}>
