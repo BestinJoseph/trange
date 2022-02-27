@@ -7,7 +7,7 @@ import {About, Services, Clients, Projects, ContactUs, Difference, Organization,
 const Routers_source = () => {
 
     return (
-        <Router onUpdate={() => window.scrollTo(0,0)}>
+        <Router>
             <Layout>
                 <Routes>
                     <Route exact path="/clients" element={<Clients />} />
